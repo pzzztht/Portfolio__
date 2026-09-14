@@ -3,6 +3,28 @@ import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
+
+const skills = [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "GraphSQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Docker",
+    "AWS",
+    "Vercel",
+    "Tailwind CSS",
+    "Prisma",
+    "Jest",
+    "Cypress",
+    "Figma",
+    "Git",
+    "GitHub Actions",
+];
+
 export const Hero = () => {
  return ( 
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -89,9 +111,45 @@ export const Hero = () => {
                 <div className="relative animate-fade-in animation-delay-300">
                     {/* Profile Image */}
                     <div className="relative max-w-md mx-auto">
-                        <div className="realative glass rounded-3xl p-2">
-                            <img src="/profile.jpg" alt="Phoo Thit" className="w-full aspect-[4/5] object-cover rounded-2xl"/>
+                        <div 
+                           className="absolute inset-0
+                           rounded-3xl bg-gradient-to-br
+                           from-primary/75 via-transparent
+                           to-primary/45 blur-xl animate-pulse
+                        "/>
+                        <div className="relative glass rounded-3xl p-2 glow-border">
+                            <img 
+                              src="/profile.jpg" 
+                              alt="Phoo Thit" 
+                              className="w-full aspect-4/5 object-cover rounded-2xl"
+                            />
+
+
+                            {/* Floating Badge */}
+                            <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pluse" />
+                                    <span className="text-sm font-medium">
+                                        Available for work
+                                    </span>
+                                </div>
+                            </div>
+                            {/* Stats Badge */}
+                            <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                                <div className="text-2xl font-bold text-primary">2+</div>
+                                <div className="text-xs text-muted-foreground">Months Exp.</div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Skills Section */}
+            <div>
+                <p>Technologies I work with </p>
+                <div>
+                    <div>
+                        [...skills, ...skills]
                     </div>
                 </div>
             </div>
